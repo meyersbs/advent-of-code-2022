@@ -61,6 +61,10 @@ def _sloc(filepath):
     return sloc
 
 
+def _size(filepath):
+    return os.path.getsize(filepath)
+
+
 def _runOnce(args):
     time_start = time.time()
     subprocess.call(args, stdout=subprocess.DEVNULL)
@@ -97,17 +101,32 @@ if __name__ == "__main__":
     print("Good SLOC: {}".format(good_sloc))
     print("Ugly SLOC: {}".format(ugly_sloc))
 
-    print("Good Average ({} Runs): {}".format(10, _runNTimes(day["good"], day["args"], 10)))
-    print("Ugly Average ({} Runs): {}".format(10, _runNTimes(day["ugly"], day["args"], 10)))
+    good_kb = _size(day["good"])
+    ugly_kb = _size(day["ugly"])
+    print("Good Size: {}b".format(good_kb))
+    print("Ugly Size: {}b".format(ugly_kb))
 
-    print("Good Average ({} Runs): {}".format(100, _runNTimes(day["good"], day["args"], 100)))
-    print("Ugly Average ({} Runs): {}".format(100, _runNTimes(day["ugly"], day["args"], 100)))
+    good_10 = _runNTimes(day["good"], day["args"], 10)
+    ugly_10 = _runNTimes(day["ugly"], day["args"], 10)
+    print("Good Average ({} Runs): {} secs".format(10, good_10))
+    print("Ugly Average ({} Runs): {} secs".format(10, ugly_10))
 
-    print("Good Average ({} Runs): {}".format(1000, _runNTimes(day["good"], day["args"], 1000)))
-    print("Ugly Average ({} Runs): {}".format(1000, _runNTimes(day["ugly"], day["args"], 1000)))
+    good_100 = _runNTimes(day["good"], day["args"], 100)
+    ugly_100 = _runNTimes(day["ugly"], day["args"], 100)
+    print("Good Average ({} Runs): {} secs".format(100, good_100))
+    print("Ugly Average ({} Runs): {} secs".format(100, ugly_100))
+
+    good_1000 = _runNTimes(day["good"], day["args"], 1000)
+    ugly_1000 = _runNTimes(day["ugly"], day["args"], 1000)
+    print("Good Average ({} Runs): {} secs".format(1000, good_1000))
+    print("Ugly Average ({} Runs): {} secs".format(1000, ugly_1000))
 
     print("----------")
 
-    print("LOC diff: {}".format(good_loc - ugly_loc))
-    print("SLOC diff: {}".format(good_sloc - ugly_sloc))
+    print("LOC Diff: {}".format(good_loc - ugly_loc))
+    print("SLOC Diff: {}".format(good_sloc - ugly_sloc))
+    print("size Diff: {}b".format(good_kb - ugly_kb))
+    print("10 Runs Diff: {} secs".format(good_10 - ugly_10))
+    print("100 Runs Diff: {} secs".format(good_100 - ugly_100))
+    print("1000 Runs Diff: {} secs".format(good_1000 - ugly_1000))
 
