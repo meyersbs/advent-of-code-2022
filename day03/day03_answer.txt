@@ -1,0 +1,2 @@
+Priority Sum: 7766
+Badge Priority Sum: 2415
