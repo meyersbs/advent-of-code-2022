@@ -53,3 +53,29 @@ size Diff: 2384b
 100 Runs Diff: 0.0015831160545349103 secs
 1000 Runs Diff: 0.001724820375442502 secs
 ```
+
+### day02
+
+```
+$ python3 diff.py day02
+
+Good LOC: 216
+Ugly LOC: 16
+Good SLOC: 139
+Ugly SLOC: 16
+Good Size: 5468b
+Ugly Size: 1009b
+Good Average (10 Runs): 0.012156176567077636 secs
+Ugly Average (10 Runs): 0.00959789752960205 secs
+Good Average (100 Runs): 0.012305912971496582 secs
+Ugly Average (100 Runs): 0.009667291641235351 secs
+Good Average (1000 Runs): 0.01233879017829895 secs
+Ugly Average (1000 Runs): 0.009877692461013794 secs
+----------
+LOC Diff: 200
+SLOC Diff: 123
+size Diff: 4459b
+10 Runs Diff: 0.0025582790374755852 secs
+100 Runs Diff: 0.0026386213302612305 secs
+1000 Runs Diff: 0.0024610977172851572 secs
+```

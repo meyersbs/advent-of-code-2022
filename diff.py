@@ -15,7 +15,11 @@ DAYS = {
         "ugly": "day01/day01_solution_ugly.py",
         "args": ["day01/day01_input.txt", "3"]
     },
-    "day02": {},
+    "day02": {
+        "good": "day02/day02_solution_good.py",
+        "ugly": "day02/day02_solution_ugly.py",
+        "args": ["day02/day02_input.txt"]
+    },
     "day03": {},
     "day04": {},
     "day05": {},
