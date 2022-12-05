@@ -20,7 +20,11 @@ DAYS = {
         "ugly": "day02/day02_solution_ugly.py",
         "args": ["day02/day02_input.txt"]
     },
-    "day03": {},
+    "day03": {
+        "good": "day03/day03_solution_good.py",
+        "ugly": "day03/day03_solution_ugly.py",
+        "args": ["day03/day03_input.txt"]
+    },
     "day04": {},
     "day05": {},
     "day06": {},
@@ -107,8 +111,8 @@ if __name__ == "__main__":
 
     good_kb = _size(day["good"])
     ugly_kb = _size(day["ugly"])
-    print("Good Size: {}b".format(good_kb))
-    print("Ugly Size: {}b".format(ugly_kb))
+    print("Good Size: {} bytes".format(good_kb))
+    print("Ugly Size: {} bytes".format(ugly_kb))
 
     good_10 = _runNTimes(day["good"], day["args"], 10)
     ugly_10 = _runNTimes(day["ugly"], day["args"], 10)
@@ -129,7 +133,7 @@ if __name__ == "__main__":
 
     print("LOC Diff: {}".format(good_loc - ugly_loc))
     print("SLOC Diff: {}".format(good_sloc - ugly_sloc))
-    print("size Diff: {}b".format(good_kb - ugly_kb))
+    print("size Diff: {} bytes".format(good_kb - ugly_kb))
     print("10 Runs Diff: {} secs".format(good_10 - ugly_10))
     print("100 Runs Diff: {} secs".format(good_100 - ugly_100))
     print("1000 Runs Diff: {} secs".format(good_1000 - ugly_1000))
