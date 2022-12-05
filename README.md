@@ -14,6 +14,7 @@ To answer a seemingly simple question: *What is the cost of readability?*
 - Both solutions must use **only** builtin python libraries.
 - Both solutions must use at least one argument (the input file).
 - Both solutions must take in the same command line arguments.
+- If one solution performs in parallel, both solutions must be parallel.
 
 ## Testing
 
