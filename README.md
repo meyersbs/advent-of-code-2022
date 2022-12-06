@@ -16,6 +16,7 @@ To answer a seemingly simple question: *What is the cost of readability?*
 - Both solutions must take in the same command line arguments.
 - If one solution is serial, the other must be as well. Same goes for parallel.
 - Lines must be no more than 100 characters; multiple statements on the same line with `;` is not allowed.
+- Debugging code (e.g. print statements) must be removed from both solutions.
 
 ## Testing
 
@@ -40,6 +41,10 @@ Benchmarks will be run on the same machine with the following specs:
 - **Python:** Python 3.9.14
 
 ## Results
+
+Notes:
+
+- `day05`: The ugly solution takes ever so slightly longer than the good solution. My gut says that's a result of the deepcopy on Line 19.
 
 ### day01
 
@@ -143,4 +148,30 @@ size Diff: 1669 bytes
 10 Runs Diff: 0.002083516120910643 secs
 100 Runs Diff: 0.0018919181823730466 secs
 1000 Runs Diff: 0.0018696269989013688 secs
+```
+
+### day05
+
+```
+$ python3 diff.py day05
+
+Good LOC: 150
+Ugly LOC: 28
+Good SLOC: 88
+Ugly SLOC: 28
+Good Size: 4738 bytes
+Ugly Size: 1260 bytes
+Good Average (10 Runs): 0.01407322883605957 secs
+Ugly Average (10 Runs): 0.014457488059997558 secs
+Good Average (100 Runs): 0.013995096683502198 secs
+Ugly Average (100 Runs): 0.014390790462493896 secs
+Good Average (1000 Runs): 0.014303854703903197 secs
+Ugly Average (1000 Runs): 0.014884650230407715 secs
+----------
+LOC Diff: 122
+SLOC Diff: 60
+size Diff: 3478 bytes
+10 Runs Diff: -0.0003842592239379876 secs
+100 Runs Diff: -0.0003956937789916983 secs
+1000 Runs Diff: -0.0005807955265045173 secs
 ```
