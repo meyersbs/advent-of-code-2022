@@ -1,0 +1,2 @@
+Sum <= 100000: 1792222
+Smallest Dir Size: 1112963
