@@ -1,5 +1,8 @@
 # advent-of-code-2022
 
+![](https://img.shields.io/badge/stars%20⭐-16-yellow)
+![](https://img.shields.io/badge/days%20completed-8-red)
+
 ## Goal
 
 My goal here is to implement two solutions: good and ugly. The **good** solution will have proper code comments and use classes/functions when necessary; it should pass an intro level software engineering course. The **ugly** solution is intended to have as few lines as possible; readability doesn't matter.
