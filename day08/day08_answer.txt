@@ -1,0 +1,2 @@
+Visible Trees: 1693
+Max Scenic Score: 422059
