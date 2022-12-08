@@ -45,6 +45,8 @@ Benchmarks will be run on the same machine with the following specs:
 Notes:
 
 - `day05`: The ugly solution takes ever so slightly longer than the good solution. My gut says that's a result of the deepcopy on Line 19.
+- `day07`: The ugly solution is not as ugly as it could be. I absolutely could replace the two classes with horribly-ugly nested lists, but implementing that would give me a headache, so I'm not doing it.
+- `day08`: Once again, the ugly solution takes longer than the good solution. I had to wrap the `max(...)` function on Line 2 to get a `default=-1`, which saved a lot of space on Line 20. Even still, I'm surprised the object-based solution outperformed the list-based solution, given that the object-based solution kind of just wraps around the same list structure.
 
 ### day01
 
@@ -200,4 +202,56 @@ size Diff: 1452 bytes
 10 Runs Diff: 0.00015325546264648507 secs
 100 Runs Diff: 0.0002820611000061042 secs
 1000 Runs Diff: 0.00011924815177917492 secs
+```
+
+### day07
+
+```
+$ python3 diff.py day07
+
+Good LOC: 163
+Ugly LOC: 45
+Good SLOC: 110
+Ugly SLOC: 45
+Good Size: 4028 bytes
+Ugly Size: 1634 bytes
+Good Average (10 Runs): 0.010244131088256836 secs
+Ugly Average (10 Runs): 0.01030113697052002 secs
+Good Average (100 Runs): 0.010449507236480714 secs
+Ugly Average (100 Runs): 0.010250954627990723 secs
+Good Average (1000 Runs): 0.010330363750457764 secs
+Ugly Average (1000 Runs): 0.010288910627365113 secs
+----------
+LOC Diff: 118
+SLOC Diff: 65
+size Diff: 2394 bytes
+10 Runs Diff: -5.700588226318325e-05 secs
+100 Runs Diff: 0.00019855260848999044 secs
+1000 Runs Diff: 4.145312309265098e-05 secs
+```
+
+### day08
+
+```
+$ python3 diff.py day08
+
+Good LOC: 124
+Ugly LOC: 23
+Good SLOC: 78
+Ugly SLOC: 23
+Good Size: 3749 bytes
+Ugly Size: 968 bytes
+Good Average (10 Runs): 0.14207961559295654 secs
+Ugly Average (10 Runs): 0.1543668746948242 secs
+Good Average (100 Runs): 0.14473127126693724 secs
+Ugly Average (100 Runs): 0.15994340419769287 secs
+Good Average (1000 Runs): 0.15166287755966187 secs
+Ugly Average (1000 Runs): 0.16136717343330384 secs
+----------
+LOC Diff: 101
+SLOC Diff: 55
+size Diff: 2781 bytes
+10 Runs Diff: -0.012287259101867676 secs
+100 Runs Diff: -0.015212132930755629 secs
+1000 Runs Diff: -0.009704295873641966 secs
 ```

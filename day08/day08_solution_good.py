@@ -122,4 +122,3 @@ if __name__ == "__main__":
     # Part 2
     scenic_score = max(forest.scenic_scores)
     print("Max Scenic Score: {}".format(scenic_score))
-
