@@ -50,6 +50,7 @@ Notes:
 - `day05`: The ugly solution takes ever so slightly longer than the good solution. My gut says that's a result of the deepcopy on Line 19.
 - `day07`: The ugly solution is not as ugly as it could be. I absolutely could replace the two classes with horribly-ugly nested lists, but implementing that would give me a headache, so I'm not doing it.
 - `day08`: Once again, the ugly solution takes longer than the good solution. I had to wrap the `max(...)` function on Line 2 to get a `default=-1`, which saved a lot of space on Line 20. Even still, I'm surprised the object-based solution outperformed the list-based solution, given that the object-based solution kind of just wraps around the same list structure.
+- `day09`: This is a terribly inefficient solution. It took over an hour to benchmark because each run takes 2 seconds, and each run is sequential...
 
 ### day01
 
@@ -257,4 +258,30 @@ size Diff: 2781 bytes
 10 Runs Diff: -0.012287259101867676 secs
 100 Runs Diff: -0.015212132930755629 secs
 1000 Runs Diff: -0.009704295873641966 secs
+```
+
+### day09
+
+```
+$ python3 diff.py day09
+
+Good LOC: 101
+Ugly LOC: 20
+Good SLOC: 63
+Ugly SLOC: 20
+Good Size: 3048 bytes
+Ugly Size: 1224 bytes
+Good Average (10 Runs): 2.1727042198181152 secs
+Ugly Average (10 Runs): 2.22709858417511 secs
+Good Average (100 Runs): 2.2665072417259218 secs
+Ugly Average (100 Runs): 2.26110817193985 secs
+Good Average (1000 Runs): 2.2894160346984864 secs
+Ugly Average (1000 Runs): 2.283467084646225 secs
+----------
+LOC Diff: 81
+SLOC Diff: 43
+size Diff: 1824 bytes
+10 Runs Diff: -0.05439436435699463 secs
+100 Runs Diff: 0.005399069786071742 secs
+1000 Runs Diff: 0.00594895005226137 secs
 ```

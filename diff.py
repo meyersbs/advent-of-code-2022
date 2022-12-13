@@ -50,7 +50,11 @@ DAYS = {
         "ugly": "day08/day08_solution_ugly.py",
         "args": ["day08/day08_input.txt"]      
     },
-    "day09": {},
+    "day09": {
+        "good": "day09/day09_solution_good.py",
+        "ugly": "day09/day09_solution_ugly.py",
+        "args": ["day09/day09_input.txt"]
+    },
     "day10": {},
     "day11": {},
     "day12": {},
